@@ -245,9 +245,6 @@ class CoordinateAB {
     }
     
     func middleCoord(newCoord: CoordinateAB) -> CoordinateAB? {
-        if newCoord.direction != self.direction{
-            return nil
-        }
         return CoordinateAB(direction: self.direction,
                             degrees: Int((self.degrees + newCoord.degrees) / 2),
                             minutes: UInt((self.getMinutes() + Int(newCoord.getMinutes())) / 2),
@@ -255,9 +252,6 @@ class CoordinateAB {
     }
     
     func middleCoordTwo(coord1: CoordinateAB, coord2: CoordinateAB) -> CoordinateAB? {
-        if coord1.direction != coord2.direction{
-            return nil
-        }
         return CoordinateAB(direction: coord1.direction,
                             degrees: Int((coord1.degrees + coord2.degrees) / 2),
                             minutes: UInt((coord1.getMinutes() + Int(coord2.getMinutes())) / 2),
@@ -266,13 +260,13 @@ class CoordinateAB {
 }
 
 
-var coord1 = CoordinateAB(direction: .Longtitude, degrees: 28, minutes: 40, seconds: 41)
+var coord1 = CoordinateAB(direction: .Longtitude, degrees: 54, minutes: 40, seconds: 51)
 var coord2 = CoordinateAB()
-coord2.setCoords(direction: .Longtitude, degrees: -10, minutes: 15, seconds: 20)
+coord2.setCoords(direction: .Longtitude, degrees: -70, minutes: 17, seconds: 20)
 var coord3 = CoordinateAB()
 coord3.setDefault()
-var coord4 = CoordinateAB(direction: .Latitude, degrees: 23, minutes: 40, seconds: 41)
-var coord5 = CoordinateAB(direction: .Latitude, degrees: -28, minutes: 31, seconds: 40)
+var coord4 = CoordinateAB(direction: .Latitude, degrees: 33, minutes: 56, seconds: 41)
+var coord5 = CoordinateAB(direction: .Latitude, degrees: -8, minutes: 34, seconds: 40)
 
 print()
 print("Вивід градусів у звичайному форматі")
