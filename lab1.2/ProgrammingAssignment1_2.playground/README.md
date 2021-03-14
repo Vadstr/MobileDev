@@ -43,13 +43,13 @@
     Київ 2021
 </p>
 
-## Варіант № 1
-(8208 mod 2) + 1 = 1
+## Варіант № 2
+(8225 mod 2) + 1 = 2
 
 ## Скріншоти роботи додатка
 
 <img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.2/ProgrammingAssignment1_2.playground/изображение_2021-03-14_132635.png" width="1000">
-<img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.2/ProgrammingAssignment1_2.playground/изображение_2021-03-14_132709.png" width="1000">
+<img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.2/ProgrammingAssignment1_2.playground/изображение_2021-03-14_132709.png" width="400">
 
 ## Лістинг роботи додатка
 
