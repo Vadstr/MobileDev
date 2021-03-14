@@ -46,5 +46,5 @@
 
 ## Скріншоти роботи додатка
 
-<img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.1/изображение_2021-03-14_130802.png" width="1000">
+<img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.1/изображение_2021-03-14_130802.png" width="300">
 <img src="https://github.com/Vadstr/MobileDev/blob/main/lab1.1/изображение_2021-03-14_130819.png" width="300">
