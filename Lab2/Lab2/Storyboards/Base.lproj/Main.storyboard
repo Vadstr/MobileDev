@@ -92,7 +92,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="xjU-En-UEG"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="globe" catalog="system" id="xjU-En-UEG"/>
                     <connections>
                         <outlet property="showGraphic" destination="RRs-Ih-KcW" id="eRQ-0n-VcK"/>
                         <outlet property="showPieChart" destination="8uO-5l-O0I" id="tNU-Vn-Ppu"/>
@@ -150,6 +150,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
