@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4g-TD-vQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.10144927536237" y="-569.19642857142856"/>
+            <point key="canvasLocation" x="796" y="-926"/>
         </scene>
         <!--BOOBS-->
         <scene sceneID="9P1-DU-3h5">
@@ -126,12 +126,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="BOOBS" id="9Za-ao-hje"/>
                     <connections>
-                        <outlet property="tableView" destination="Wpn-HP-wPf" id="Zvy-0B-0Ep"/>
+                        <outlet property="tableView" destination="Wpn-HP-wPf" id="qdw-f6-fv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw2-vE-6GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257.97101449275362" y="-97.098214285714278"/>
+            <point key="canvasLocation" x="-178" y="-97"/>
         </scene>
         <!--my name-->
         <scene sceneID="Wat-Bg-dtR">
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5Y-kY-ejl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-1251"/>
+            <point key="canvasLocation" x="796" y="-1599"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="baX-ZX-Ody">
@@ -198,6 +198,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nap-we-hK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1168.1159420289855" y="-97.098214285714278"/>
+        </scene>
+        <!--Book Content View Controler-->
+        <scene sceneID="5Cr-dA-Xj6">
+            <objects>
+                <viewController storyboardIdentifier="BookContentViewControler" id="7cI-wJ-Ohu" customClass="BookContentViewControler" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZQ-HD-Faz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-3v-gq6" userLabel="book Content View Controler">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hbw-ep-g5J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vmA-9s-Z9q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="trailing" secondItem="5zC-3v-gq6" secondAttribute="trailing" id="2iY-At-Yp1"/>
+                            <constraint firstItem="5zC-3v-gq6" firstAttribute="leading" secondItem="vmA-9s-Z9q" secondAttribute="leading" id="DcL-Ie-8lO"/>
+                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="bottom" secondItem="5zC-3v-gq6" secondAttribute="bottom" id="EJ7-zj-cl8"/>
+                            <constraint firstItem="5zC-3v-gq6" firstAttribute="top" secondItem="vmA-9s-Z9q" secondAttribute="top" id="OWv-RZ-gp5"/>
+                            <constraint firstItem="5zC-3v-gq6" firstAttribute="leading" secondItem="vmA-9s-Z9q" secondAttribute="leading" id="XAt-CL-MM9"/>
+                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="trailing" secondItem="5zC-3v-gq6" secondAttribute="trailing" id="YrH-um-gM4"/>
+                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="bottom" secondItem="5zC-3v-gq6" secondAttribute="bottom" id="jbQ-wY-tBO"/>
+                            <constraint firstItem="5zC-3v-gq6" firstAttribute="top" secondItem="vmA-9s-Z9q" secondAttribute="top" id="x1J-5L-HE3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookContentTableView" destination="5zC-3v-gq6" id="F1O-dq-4lM"/>
+                        <outlet property="bookPreviewImageView" destination="Hbw-ep-g5J" id="kgI-R1-Ei4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYc-k2-sgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.6521739130435" y="-97.098214285714278"/>
         </scene>
     </scenes>
     <resources>

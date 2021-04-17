@@ -9,6 +9,7 @@ import UIKit
 
 class BooksViewController: UIViewController {
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     var books: [Book] = []
@@ -39,9 +40,36 @@ class BooksViewController: UIViewController {
         }
         return []
     }
+    
+    func getBook(with id: String) -> Book? {
+            
+            guard !id.isEmpty else {
+                return nil
+            }
+            
+            do {
+                if let path = Bundle.main.path(forResource: id, ofType: "txt"),
+                   let jsonData = try String(contentsOfFile: path, encoding: String.Encoding.utf8).data(using: .utf8) {
+                    
+                    let decodedData = try JSONDecoder().decode(Book.self, from: jsonData)
+                    return decodedData
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            return nil
+        }
 }
 
 extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedID = books[indexPath.row].isbn13
+        if let selectedBook = getBook(with: selectedID){
+        let controller = BookContentViewControler.create(with: selectedBook)
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
