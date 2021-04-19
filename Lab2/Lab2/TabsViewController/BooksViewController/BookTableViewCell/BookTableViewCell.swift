@@ -2,7 +2,7 @@
 //  BookTableViewCell.swift
 //  MobileSystemProgramming
 //
-//  Created by Illia Starodubtcev on 14.03.2021.
+//  Created by Vadim on 17.03.2021.
 //
 
 import UIKit
