@@ -9,8 +9,8 @@ import UIKit
 
 class ShowGraphic: UIView {
     
-    var startPoint: Double = -5.0
-    var endPoint: Double = 5.0
+    var startPoint: Double = -2 * Double.pi
+    var endPoint: Double = 2 * Double.pi
     
     var width: Double {
         return Double(frame.width)
@@ -22,15 +22,15 @@ class ShowGraphic: UIView {
     
     // The equivalent value of the unit relative to the UIView size
     var equivalentUnit: Double {
-        return height / (endPoint * endPoint + 1)
+        return height * 0.8 / (endPoint + endPoint)
     }
     
     var equivalentStartPoint: Double {
-        return startPoint * equivalentUnit
+        return equivalentUnit
     }
     
     var equivalentEndPoint: Double {
-        return endPoint * equivalentUnit
+        return  equivalentUnit
     }
     
     var chartHeight: Double {
@@ -53,9 +53,9 @@ class ShowGraphic: UIView {
         let xEndPoint = CGPoint(x: width - 16, y: chartHeight)
         line.move(to: CGPoint(x: 16, y: chartHeight))
         line.addLine(to: xEndPoint)
-        line.move(to: CGPoint(x: width - 26, y: chartHeight - 10))
+        line.move(to: CGPoint(x: width - 26, y: chartHeight - 5))
         line.addLine(to: xEndPoint)
-        line.move(to: CGPoint(x: width - 26, y: chartHeight + 10))
+        line.move(to: CGPoint(x: width - 26, y: chartHeight + 5))
         line.addLine(to: xEndPoint)
         line.move(to: CGPoint(x: equivalentStartPoint + width / 2, y: chartHeight + 5))
         line.addLine(to: CGPoint(x: equivalentStartPoint + width / 2, y: chartHeight - 5))
@@ -97,7 +97,7 @@ class ShowGraphic: UIView {
     private func getPoint(for x: Double) -> CGPoint {
         
         let newX = x * equivalentUnit + (width / 2)
-        let newY = x * x * equivalentUnit - chartHeight
+        let newY = sin(x) * equivalentUnit - chartHeight
         
         return CGPoint(x: newX, y: -newY)
     }

@@ -9,9 +9,10 @@ import UIKit
 
 class ShowPieChart: UIView {
     
-    private var units = [Unit(value: 0.35, color: .green),
-                         Unit(value: 0.40, color: .yellow),
-                         Unit(value: 0.25, color: .red)]
+    private var units = [Unit(value: 0.05, color: .brown),
+                         Unit(value: 0.05, color: .systemBlue),
+                         Unit(value: 0.10, color: .orange),
+                         Unit(value: 0.80, color: .blue)]
         
     override func draw(_ rect: CGRect) {
         
