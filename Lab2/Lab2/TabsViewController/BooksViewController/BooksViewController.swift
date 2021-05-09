@@ -83,4 +83,8 @@ extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
         cell.book = book
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Library"
+    }
 }

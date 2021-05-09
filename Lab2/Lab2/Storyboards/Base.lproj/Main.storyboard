@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="796" y="-926"/>
         </scene>
-        <!--BOOBS-->
+        <!--BOOKS-->
         <scene sceneID="9P1-DU-3h5">
             <objects>
                 <viewController storyboardIdentifier="BooksViewController" id="lWM-6l-eWp" customClass="BooksViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,23 +110,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-HP-wPf">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="14" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-HP-wPf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KXL-AZ-QG7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wpn-HP-wPf" firstAttribute="top" secondItem="KXL-AZ-QG7" secondAttribute="top" id="1BJ-Af-Qtu"/>
+                            <constraint firstItem="Wpn-HP-wPf" firstAttribute="top" secondItem="eAw-1c-iUH" secondAttribute="top" id="1BJ-Af-Qtu"/>
                             <constraint firstItem="Wpn-HP-wPf" firstAttribute="leading" secondItem="KXL-AZ-QG7" secondAttribute="leading" id="7yq-xf-0ad"/>
                             <constraint firstItem="KXL-AZ-QG7" firstAttribute="trailing" secondItem="Wpn-HP-wPf" secondAttribute="trailing" id="Ued-bA-X6n"/>
-                            <constraint firstItem="KXL-AZ-QG7" firstAttribute="bottom" secondItem="Wpn-HP-wPf" secondAttribute="bottom" id="nPx-jE-ZYW"/>
+                            <constraint firstAttribute="bottom" secondItem="Wpn-HP-wPf" secondAttribute="bottom" id="nPx-jE-ZYW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BOOBS" id="9Za-ao-hje"/>
+                    <navigationItem key="navigationItem" title="BOOKS" largeTitleDisplayMode="always" id="9Za-ao-hje"/>
                     <connections>
                         <outlet property="tableView" destination="Wpn-HP-wPf" id="qdw-f6-fv9"/>
+                        <segue destination="7cI-wJ-Ohu" kind="show" id="taY-36-yLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw2-vE-6GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,8 +187,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="02a-1P-WhZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Books" image="books.vertical.fill" catalog="system" id="e4m-vX-Feg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tk5-kD-2Ki">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tk5-kD-2Ki">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -199,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-1168.1159420289855" y="-97.098214285714278"/>
         </scene>
-        <!--Book Content View Controler-->
+        <!--Details-->
         <scene sceneID="5Cr-dA-Xj6">
             <objects>
                 <viewController storyboardIdentifier="BookContentViewControler" id="7cI-wJ-Ohu" customClass="BookContentViewControler" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
@@ -207,9 +208,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-3v-gq6" userLabel="book Content View Controler">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5zC-3v-gq6" userLabel="book Content View Controler">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.72229939721430769" green="0.2610663010677492" blue="1" alpha="0.21899757922535212" colorSpace="custom" customColorSpace="displayP3"/>
                                 <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hbw-ep-g5J">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,14 +222,13 @@
                         <constraints>
                             <constraint firstItem="vmA-9s-Z9q" firstAttribute="trailing" secondItem="5zC-3v-gq6" secondAttribute="trailing" id="2iY-At-Yp1"/>
                             <constraint firstItem="5zC-3v-gq6" firstAttribute="leading" secondItem="vmA-9s-Z9q" secondAttribute="leading" id="DcL-Ie-8lO"/>
-                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="bottom" secondItem="5zC-3v-gq6" secondAttribute="bottom" id="EJ7-zj-cl8"/>
-                            <constraint firstItem="5zC-3v-gq6" firstAttribute="top" secondItem="vmA-9s-Z9q" secondAttribute="top" id="OWv-RZ-gp5"/>
+                            <constraint firstItem="5zC-3v-gq6" firstAttribute="top" secondItem="cZQ-HD-Faz" secondAttribute="top" id="OWv-RZ-gp5"/>
                             <constraint firstItem="5zC-3v-gq6" firstAttribute="leading" secondItem="vmA-9s-Z9q" secondAttribute="leading" id="XAt-CL-MM9"/>
                             <constraint firstItem="vmA-9s-Z9q" firstAttribute="trailing" secondItem="5zC-3v-gq6" secondAttribute="trailing" id="YrH-um-gM4"/>
-                            <constraint firstItem="vmA-9s-Z9q" firstAttribute="bottom" secondItem="5zC-3v-gq6" secondAttribute="bottom" id="jbQ-wY-tBO"/>
-                            <constraint firstItem="5zC-3v-gq6" firstAttribute="top" secondItem="vmA-9s-Z9q" secondAttribute="top" id="x1J-5L-HE3"/>
+                            <constraint firstAttribute="bottom" secondItem="5zC-3v-gq6" secondAttribute="bottom" id="jbQ-wY-tBO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="fs6-zF-Y9c"/>
                     <connections>
                         <outlet property="bookContentTableView" destination="5zC-3v-gq6" id="F1O-dq-4lM"/>
                         <outlet property="bookPreviewImageView" destination="Hbw-ep-g5J" id="kgI-R1-Ei4"/>
@@ -248,6 +248,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
