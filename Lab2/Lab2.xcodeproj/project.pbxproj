@@ -35,6 +35,11 @@
 		DDB4E0A0262B454A008E77BF /* BookContentViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4E09F262B454A008E77BF /* BookContentViewControler.swift */; };
 		DDB4E0A5262B49D0008E77BF /* BookContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4E0A3262B49D0008E77BF /* BookContentTableViewCell.swift */; };
 		DDB4E0A6262B49D0008E77BF /* BookContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB4E0A4262B49D0008E77BF /* BookContentTableViewCell.xib */; };
+		DDBD5EF9264827AC006229FD /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD5EF8264827AC006229FD /* ImagesViewController.swift */; };
+		DDBD5EFD264829DB006229FD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD5EFB264829DB006229FD /* ImageCollectionViewCell.swift */; };
+		DDBD5EFE264829DB006229FD /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBD5EFC264829DB006229FD /* ImageCollectionViewCell.xib */; };
+		DDBD5F0126482CEE006229FD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD5F0026482CEE006229FD /* ImagePicker.swift */; };
+		DDBD5F0426482E10006229FD /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD5F0326482E10006229FD /* CustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +73,11 @@
 		DDB4E09F262B454A008E77BF /* BookContentViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookContentViewControler.swift; sourceTree = "<group>"; };
 		DDB4E0A3262B49D0008E77BF /* BookContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookContentTableViewCell.swift; sourceTree = "<group>"; };
 		DDB4E0A4262B49D0008E77BF /* BookContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookContentTableViewCell.xib; sourceTree = "<group>"; };
+		DDBD5EF8264827AC006229FD /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		DDBD5EFB264829DB006229FD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDBD5EFC264829DB006229FD /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		DDBD5F0026482CEE006229FD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DDBD5F0326482E10006229FD /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		DDAE670925FE378B00AF9D7D /* TabsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DDBD5EF62648272D006229FD /* ImagesViewController */,
 				DDB4E071262B355F008E77BF /* BooksViewController */,
 				DDAE670C25FE38ED00AF9D7D /* InfoViewController */,
 				DDAE670B25FE38C000AF9D7D /* ShowViewController */,
@@ -221,6 +232,18 @@
 			path = BookContentTableViewCell;
 			sourceTree = "<group>";
 		};
+		DDBD5EF62648272D006229FD /* ImagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DDBD5EF8264827AC006229FD /* ImagesViewController.swift */,
+				DDBD5EFB264829DB006229FD /* ImageCollectionViewCell.swift */,
+				DDBD5EFC264829DB006229FD /* ImageCollectionViewCell.xib */,
+				DDBD5F0026482CEE006229FD /* ImagePicker.swift */,
+				DDBD5F0326482E10006229FD /* CustomLayout.swift */,
+			);
+			path = ImagesViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,6 +303,7 @@
 			files = (
 				DDB4E099262B42B2008E77BF /* 9781430237105.txt in Resources */,
 				DDB4E097262B42B2008E77BF /* 9781430238072.txt in Resources */,
+				DDBD5EFE264829DB006229FD /* ImageCollectionViewCell.xib in Resources */,
 				DDAE670125FE36FC00AF9D7D /* LaunchScreen.storyboard in Resources */,
 				DDB4E094262B42B2008E77BF /* 9781430260226.txt in Resources */,
 				DDB4E07B262B37C1008E77BF /* BooksList.txt in Resources */,
@@ -310,10 +334,14 @@
 				DDAE66F925FE36FB00AF9D7D /* ViewController.swift in Sources */,
 				DDAE66F525FE36FB00AF9D7D /* AppDelegate.swift in Sources */,
 				DDAE670E25FE396D00AF9D7D /* InfoViewController.swift in Sources */,
+				DDBD5F0426482E10006229FD /* CustomLayout.swift in Sources */,
 				DDB4E078262B3674008E77BF /* Book.swift in Sources */,
 				DDAE66F725FE36FB00AF9D7D /* SceneDelegate.swift in Sources */,
 				DDAE671C25FE485700AF9D7D /* ShowPieChart.swift in Sources */,
+				DDBD5EF9264827AC006229FD /* ImagesViewController.swift in Sources */,
+				DDBD5EFD264829DB006229FD /* ImageCollectionViewCell.swift in Sources */,
 				DDB4E084262B38F3008E77BF /* BookTableViewCell.swift in Sources */,
+				DDBD5F0126482CEE006229FD /* ImagePicker.swift in Sources */,
 				DDB4E0A5262B49D0008E77BF /* BookContentTableViewCell.swift in Sources */,
 				DDAE671925FE483500AF9D7D /* ShowGraphic.swift in Sources */,
 			);
