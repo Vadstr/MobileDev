@@ -50,7 +50,7 @@
 
 ## Скріншоти роботи додатка
 
-<img src="" width="300">
+<img src="https://github.com/Vadstr/MobileDev/blob/Lab4/Lab2/Lab2/Запись%20экрана%202021-05-09%20в%2021.08.19.gif" width="300">
 
 ## Висновок
 
