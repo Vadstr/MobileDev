@@ -40,4 +40,18 @@ struct Book: Codable {
             (field: "Price", value: price)
         ]
     }
+    
+    init(title: String, subtitle: String, price: Int) {
+        self.title = title
+        self.subtitle = subtitle
+        self.price = "$\(price)"
+        self.authors = nil
+        self.publisher = nil
+        self.pages = nil
+        self.year = nil
+        self.rating = nil
+        self.desc = nil
+        self.image = ""
+        self.isbn13 = UUID().uuidString
+    }
 }

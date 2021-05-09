@@ -114,18 +114,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can`t found(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-z6-4Ga">
+                                <rect key="frame" x="155" y="466" width="104.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KXL-AZ-QG7"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wpn-HP-wPf" firstAttribute="top" secondItem="eAw-1c-iUH" secondAttribute="top" id="1BJ-Af-Qtu"/>
+                            <constraint firstItem="tFq-z6-4Ga" firstAttribute="centerY" secondItem="KXL-AZ-QG7" secondAttribute="centerY" id="3Ew-Ku-Ek6"/>
                             <constraint firstItem="Wpn-HP-wPf" firstAttribute="leading" secondItem="KXL-AZ-QG7" secondAttribute="leading" id="7yq-xf-0ad"/>
                             <constraint firstItem="KXL-AZ-QG7" firstAttribute="trailing" secondItem="Wpn-HP-wPf" secondAttribute="trailing" id="Ued-bA-X6n"/>
                             <constraint firstAttribute="bottom" secondItem="Wpn-HP-wPf" secondAttribute="bottom" id="nPx-jE-ZYW"/>
+                            <constraint firstItem="tFq-z6-4Ga" firstAttribute="centerX" secondItem="KXL-AZ-QG7" secondAttribute="centerX" id="ziN-jh-J96"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BOOKS" largeTitleDisplayMode="always" id="9Za-ao-hje"/>
+                    <navigationItem key="navigationItem" title="BOOKS" largeTitleDisplayMode="always" id="9Za-ao-hje">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="gPM-bQ-zDD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZWi-FQ-1nW">
+                                <rect key="frame" x="278" y="7" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create new book"/>
+                                <connections>
+                                    <action selector="createNewAction:" destination="lWM-6l-eWp" eventType="touchUpInside" id="7hD-mR-TRg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cantFoundLabel" destination="tFq-z6-4Ga" id="GMf-pf-Q7c"/>
                         <outlet property="tableView" destination="Wpn-HP-wPf" id="qdw-f6-fv9"/>
                         <segue destination="7cI-wJ-Ohu" kind="show" id="taY-36-yLo"/>
                     </connections>
@@ -160,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5Y-kY-ejl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-1599"/>
+            <point key="canvasLocation" x="796" y="-1664"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="baX-ZX-Ody">
