@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class ImagesViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
-    var images: [UIImage] = []
-    var imagePicker: ImagePicker!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var images: [ImageModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,20 +21,21 @@ class ImagesViewController: UIViewController {
         collection.dataSource = self
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collection.register(nib, forCellWithReuseIdentifier: "ImageCollectionViewCell")
-        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         collection.setCollectionViewLayout(CustomLayout(), animated: false)
+        findImages()
     }
     
-    @IBAction func createNewAction(_ sender: Any) {
-        imagePicker.present()
-    }
-}
-
-extension ImagesViewController: ImagePickerDelegate {
-    
-    func didSelect(image: UIImage?) {
-        images.append(image!)
-        collection.reloadData()
+    func findImages() {
+        activityIndicator.startAnimating()
+        AF.request("https://pixabay.com/api/",parameters: ["key":"19193969-87191e5db266905fe8936d565","per_page":"21","q":"red+car"])
+            .validate()
+            .responseDecodable(of: ImageArray.self) { [weak self] (response) in
+                self?.activityIndicator.stopAnimating()
+                guard let response = response.value else { return }
+                self?.images = response.hits
+                self?.collection.reloadData()
+            }
+        
     }
 }
 
@@ -44,8 +46,7 @@ extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell" , for: indexPath) as! ImageCollectionViewCell
-        let image = images[indexPath.row]
-        cell.imageView.image = image
+        cell.imageView.sd_setImage(with: URL(string: images[indexPath.row].webformatURL), placeholderImage: UIImage(systemName: "car.2.fill"))
         return cell
     }
 }

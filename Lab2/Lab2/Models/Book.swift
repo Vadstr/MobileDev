@@ -17,15 +17,6 @@ struct Book: Codable {
     let title, subtitle, isbn13, price, image: String
     let authors, publisher, pages, year, rating, desc: String?
     
-    var bookImage: UIImage? {
-        
-        guard !image.isEmpty else {
-            
-            return UIImage(systemName: "doc.fill.badge.plus")
-        }
-        return UIImage(named: image) ?? UIImage(systemName: "doc.fill.badge.plus")
-    }
-    
     var getFullContent: [(field: String, value: String)]{
         return[
             (field: "Title", value: title),

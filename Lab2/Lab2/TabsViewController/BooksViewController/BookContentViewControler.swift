@@ -24,7 +24,7 @@ class BookContentViewControler: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bookPreviewImageView.image = book.bookImage
+        bookPreviewImageView.sd_setImage(with: URL(string: book?.image ?? ""), placeholderImage: UIImage(systemName: "doc.fill.badge.plus"))
         
         bookContentTableView.register(UINib(nibName: "BookContentTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "BookContentTableViewCell")
         

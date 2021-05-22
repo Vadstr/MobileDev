@@ -121,6 +121,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xOo-jO-9H1">
+                                <rect key="frame" x="157" y="426.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kqj-Gy-uZz"/>
+                                    <constraint firstAttribute="height" constant="100" id="f7r-sa-oXs"/>
+                                </constraints>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KXL-AZ-QG7"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -129,23 +138,15 @@
                             <constraint firstItem="tFq-z6-4Ga" firstAttribute="centerY" secondItem="KXL-AZ-QG7" secondAttribute="centerY" id="3Ew-Ku-Ek6"/>
                             <constraint firstItem="Wpn-HP-wPf" firstAttribute="leading" secondItem="KXL-AZ-QG7" secondAttribute="leading" id="7yq-xf-0ad"/>
                             <constraint firstItem="KXL-AZ-QG7" firstAttribute="trailing" secondItem="Wpn-HP-wPf" secondAttribute="trailing" id="Ued-bA-X6n"/>
+                            <constraint firstItem="xOo-jO-9H1" firstAttribute="centerY" secondItem="KXL-AZ-QG7" secondAttribute="centerY" id="lzs-wo-SFi"/>
+                            <constraint firstItem="xOo-jO-9H1" firstAttribute="centerX" secondItem="KXL-AZ-QG7" secondAttribute="centerX" id="mYP-iO-p4s"/>
                             <constraint firstAttribute="bottom" secondItem="Wpn-HP-wPf" secondAttribute="bottom" id="nPx-jE-ZYW"/>
                             <constraint firstItem="tFq-z6-4Ga" firstAttribute="centerX" secondItem="KXL-AZ-QG7" secondAttribute="centerX" id="ziN-jh-J96"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BOOKS" largeTitleDisplayMode="always" id="9Za-ao-hje">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="gPM-bQ-zDD">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZWi-FQ-1nW">
-                                <rect key="frame" x="278" y="7" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create new book"/>
-                                <connections>
-                                    <action selector="createNewAction:" destination="lWM-6l-eWp" eventType="touchUpInside" id="7hD-mR-TRg"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="BOOKS" largeTitleDisplayMode="always" id="9Za-ao-hje"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xOo-jO-9H1" id="16h-BI-Brv"/>
                         <outlet property="cantFoundLabel" destination="tFq-z6-4Ga" id="GMf-pf-Q7c"/>
                         <outlet property="tableView" destination="Wpn-HP-wPf" id="qdw-f6-fv9"/>
                         <segue destination="7cI-wJ-Ohu" kind="show" id="taY-36-yLo"/>
@@ -153,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw2-vE-6GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671.0144927536235" y="-198.21428571428569"/>
+            <point key="canvasLocation" x="1894" y="-198"/>
         </scene>
         <!--my name-->
         <scene sceneID="Wat-Bg-dtR">
@@ -181,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5Y-kY-ejl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-1664"/>
+            <point key="canvasLocation" x="796" y="-1734"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="baX-ZX-Ody">
@@ -231,29 +232,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="uyO-rQ-kkO">
+                                <rect key="frame" x="157" y="400.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="H9n-Pb-hov"/>
+                                    <constraint firstAttribute="height" constant="100" id="U4S-zB-vpz"/>
+                                </constraints>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYz-LF-8uT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uyO-rQ-kkO" firstAttribute="centerY" secondItem="dYz-LF-8uT" secondAttribute="centerY" id="5SV-HY-iN5"/>
                             <constraint firstItem="dYz-LF-8uT" firstAttribute="bottom" secondItem="ZOY-FG-dAW" secondAttribute="bottom" id="o0k-vu-Exl"/>
                             <constraint firstItem="ZOY-FG-dAW" firstAttribute="leading" secondItem="dYz-LF-8uT" secondAttribute="leading" id="pKs-oY-WdX"/>
+                            <constraint firstItem="uyO-rQ-kkO" firstAttribute="centerX" secondItem="dYz-LF-8uT" secondAttribute="centerX" id="s7S-4K-k85"/>
                             <constraint firstItem="ZOY-FG-dAW" firstAttribute="top" secondItem="dYz-LF-8uT" secondAttribute="top" id="uZb-uk-Ux0"/>
                             <constraint firstItem="dYz-LF-8uT" firstAttribute="trailing" secondItem="ZOY-FG-dAW" secondAttribute="trailing" id="vax-yQ-wxa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="IMAGES" id="zO7-SW-sqP">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZZr-ka-tBA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="J3S-kX-wnh">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create new"/>
-                                <connections>
-                                    <action selector="createNewAction:" destination="mbV-cg-j3g" eventType="touchUpInside" id="LmF-9o-rg8"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="IMAGES" id="zO7-SW-sqP"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="uyO-rQ-kkO" id="FAY-W2-Hxu"/>
                         <outlet property="collection" destination="ZOY-FG-dAW" id="Lcl-ju-dTG"/>
                     </connections>
                 </viewController>
@@ -278,7 +280,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nap-we-hK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705.7971014492755" y="-197.54464285714286"/>
+            <point key="canvasLocation" x="796" y="-198"/>
         </scene>
         <!--Details-->
         <scene sceneID="5Cr-dA-Xj6">
@@ -316,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYc-k2-sgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3589.8550724637685" y="-198.21428571428569"/>
+            <point key="canvasLocation" x="3041" y="-198"/>
         </scene>
         <!--tab 4-->
         <scene sceneID="5tM-n1-VpK">
@@ -351,6 +353,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

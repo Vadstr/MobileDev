@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BookTableViewCell: UITableViewCell {
     
@@ -16,7 +17,7 @@ class BookTableViewCell: UITableViewCell {
     
     var book: Book? {
         didSet {
-            bookImageView.image = book?.bookImage
+            bookImageView.sd_setImage(with: URL(string: book?.image ?? ""), placeholderImage: UIImage(systemName: "doc.fill.badge.plus"))
             bookTitleLabel.text = book?.title
             bookSubtitleLabel.text = book?.subtitle
             bookPriceLabel.text = book?.price
