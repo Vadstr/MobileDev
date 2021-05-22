@@ -32,8 +32,10 @@ class ImagesViewController: UIViewController {
 extension ImagesViewController: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
-        images.append(image!)
-        collection.reloadData()
+        if let image = image {
+            images.append(image)
+            collection.reloadData()
+        }
     }
 }
 
