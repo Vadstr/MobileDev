@@ -15,7 +15,7 @@
 <br/>
 <br/>
 <p align="center">
-    Лабораторна робота №5
+    Лабораторна робота №6
 </p>
 <p align="center">
     з дисципліни “Програмування мобільних систем”
@@ -52,7 +52,7 @@
 
 ## Скріншоти роботи додатка
 
-<img src="" width="300">
+<img src="https://github.com/Vadstr/MobileDev/blob/Lab6/gif%20of%20work.gif" width="300">
 
 ## Висновок
 
