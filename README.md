@@ -52,7 +52,7 @@
 
 ## Скріншоти роботи додатка
 
-<img src="https://github.com/Vadstr/MobileDev/blob/Lab6/gif%20of%20work.gif" width="300">
+<img src="https://github.com/Vadstr/MobileDev/blob/Lab6/gifOfWork.gif" width="300">
 
 ## Висновок
 
